@@ -1,0 +1,80 @@
+{
+  "name": "Shelly PDU",
+  "type": "WebSocket Client",
+  "path": "Hardware",
+
+  "version": "0.0.1",
+  "description": "Control Shelly PDUs and relays",
+  "url": "https://github.com/DonGuig/Shelly-chataigne-module",
+  "downloadURL": "https://github.com/DonGuig/Shelly-chataigne-module/archive/master.zip",
+
+  "hasInput": true,
+  "hasOutput": true,
+  "hideDefaultCommands": false,
+
+  "defaults": {
+    "autoAdd": false,
+    "timeout": false,
+    "protocol": "JSON"
+  },
+
+  "parameters": {"Ip address":     {
+    "type":"String",
+    "default":"0.0.0.0",
+    "description":"IP address of the amplifier."
+  }},
+
+  "hideDefaultParameters": [
+    "autoAdd",
+    "protocol",
+    "messageStructure",
+    "customSeparator",
+    "firstValueIsTheName",
+    "useSecureConnection",
+    "serverPath",
+    "authentication",
+    "authentication/username",
+    "authentication/password",
+    "clearValues"
+  ],
+
+  "scripts": ["moduleScript.js"],
+
+  "values": {
+    "Shelly ID":{
+      "type": "String",
+      "readOnly":"true"
+    },
+    "Switch Status":{
+      "type": "Boolean",
+      "readOnly":"true"
+    },
+    "Output Power (W)":{
+      "type": "Float",
+      "readOnly":"true"
+    },
+    "Output Voltage (V)":{
+      "type": "Float",
+      "readOnly":"true"
+    },
+    "Output Current (A)":{
+      "type": "Float",
+      "readOnly":"true"
+    }
+  },
+
+  "commands": {
+    "Switch On": {
+      "menu": "",
+      "callback": "switchOn"
+    },
+    "Switch Off": {
+      "menu": "",
+      "callback": "switchOff"
+    },
+    "Request status": {
+      "menu": "",
+      "callback": "requestStatus"
+    }
+  }
+}
