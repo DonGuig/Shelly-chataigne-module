@@ -79,19 +79,6 @@ function wsMessageReceived(message){
     local.values.outputCurrent_A_.set(obj['params']['switch:0']['current']);
   }
 
-  // if (requestURL === (local.parameters.baseAddress.get() + "/power/standby")){
-  //   script.log("received power status  " + data);
-  //   if (data === "true"){
-  //     res = true;
-  //   } else {
-  //     res = false;
-  //   }
-  //   local.values.standbyStatus.set(res);
-  // } else if (requestURL === (local.parameters.baseAddress.get() + "/power")){
-  //   script.log("received power status  " + data);
-  //   script.log(data.standby);
-  //   local.values.standbyStatus.set(data.standby);
-  // }
 }
 
 // utility functions
