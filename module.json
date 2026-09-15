@@ -3,7 +3,7 @@
   "type": "WebSocket Client",
   "path": "Hardware",
 
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Control Shelly PDUs and relays",
   "url": "https://github.com/DonGuig/Shelly-chataigne-module",
   "downloadURL": "https://github.com/DonGuig/Shelly-chataigne-module/archive/master.zip",
@@ -58,6 +58,14 @@
       "readOnly":"true"
     },
     "Output Current (A)":{
+      "type": "Float",
+      "readOnly":"true"
+    },
+    "ssid":{
+      "type": "String",
+      "readOnly":"true"
+    },
+    "rssi":{
       "type": "Float",
       "readOnly":"true"
     }

@@ -79,6 +79,20 @@ function wsMessageReceived(message){
     local.values.outputCurrent_A_.set(obj['params']['switch:0']['current']);
   }
 
+  if (typeof(obj['result']['wifi']['ssid']) !== 'undefined'){    
+    local.values.ssid.set(obj['result']['wifi']['ssid']);
+  } 
+  if (typeof(obj['params']['wifi']['ssid']) !== 'undefined'){    
+    local.values.ssid.set(obj['params']['wifi']['ssid']);
+  }
+
+  if (typeof(obj['result']['wifi']['rssi']) !== 'undefined'){    
+    local.values.rssi.set(obj['result']['wifi']['rssi']);
+  } 
+  if (typeof(obj['params']['wifi']['rssi']) !== 'undefined'){    
+    local.values.rssi.set(obj['params']['wifi']['rssi']);
+  }
+
 }
 
 // utility functions
