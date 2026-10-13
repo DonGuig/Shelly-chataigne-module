@@ -21,7 +21,7 @@
   "parameters": {"Ip address":     {
     "type":"String",
     "default":"0.0.0.0",
-    "description":"IP address of the amplifier."
+    "description":"IP address of the shelly."
   }},
 
   "hideDefaultParameters": [
